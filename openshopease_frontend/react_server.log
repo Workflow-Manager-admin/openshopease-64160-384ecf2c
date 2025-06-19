@@ -1,0 +1,248 @@
+
+> react-kavia@0.1.0 start
+> cross-env EDIT_MODE=true webpack serve --config .ve/webpack.config.js --mode development
+
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: http://localhost:3000/, http://[::1]:3000/
+<i> [webpack-dev-server] On Your Network (IPv4): http://172.17.0.2:3000/
+<i> [webpack-dev-server] Content not from webpack is served from './public' directory
+Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
+asset bundle.js 1.39 MiB [emitted] (name: main)
+asset index.html 1.98 KiB [emitted]
+runtime modules 27.5 KiB 14 modules
+modules by path ./node_modules/ 1.24 MiB 31 modules
+modules by path ./src/ 10.3 KiB
+  modules by path ./src/*.css 7.49 KiB 4 modules
+  modules by path ./src/*.js 2.76 KiB
+    ./src/index.js 530 bytes [built] [code generated]
+    ./src/App.js 2.24 KiB [built] [code generated]
+modules by path ./.ve/ 15.1 KiB
+  modules by path ./.ve/*.js 10.6 KiB 2 modules
+  modules by path ./.ve/*.css 2.93 KiB
+    ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
+    ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
+  ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 1226 ms
+assets by status 1.98 KiB [cached] 1 asset
+assets by path *.js 1.4 MiB
+  asset bundle.js 1.4 MiB [emitted] (name: main)
+  asset main.c6c69d2b552331ee37d3.hot-update.js 8.55 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.c6c69d2b552331ee37d3.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.4 MiB = bundle.js 1.4 MiB main.c6c69d2b552331ee37d3.hot-update.js 8.55 KiB
+cached modules 1.26 MiB [cached] 41 modules
+runtime modules 27.5 KiB 14 modules
+./src/App.js 4.39 KiB [built] [code generated]
+
+ERROR in ./src/App.js 3:0-43
+Module not found: Error: Can't resolve './components/Sidebar' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 4:0-57
+Module not found: Error: Can't resolve './components/ProductListing' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 5:0-53
+Module not found: Error: Can't resolve './components/ShoppingCart' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 6:0-45
+Module not found: Error: Can't resolve './components/Checkout' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 7:0-51
+Module not found: Error: Can't resolve './components/UserProfile' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+5 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.99.9 compiled with 5 errors in 123 ms
+assets by status 1.98 KiB [cached] 1 asset
+assets by path *.js 1.41 MiB
+  asset bundle.js 1.4 MiB [emitted] (name: main)
+  asset main.bb37fe829ea7282a559b.hot-update.js 10 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.bb37fe829ea7282a559b.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.41 MiB = bundle.js 1.4 MiB main.bb37fe829ea7282a559b.hot-update.js 10 KiB
+cached modules 1.26 MiB [cached] 41 modules
+runtime modules 27.5 KiB 14 modules
+./node_modules/css-loader/dist/cjs.js!./src/App.css 7.28 KiB [built] [code generated]
+
+ERROR in ./src/App.js 3:0-43
+Module not found: Error: Can't resolve './components/Sidebar' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 4:0-57
+Module not found: Error: Can't resolve './components/ProductListing' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 5:0-53
+Module not found: Error: Can't resolve './components/ShoppingCart' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 6:0-45
+Module not found: Error: Can't resolve './components/Checkout' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 7:0-51
+Module not found: Error: Can't resolve './components/UserProfile' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+5 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.99.9 compiled with 5 errors in 64 ms
+assets by status 1.98 KiB [cached] 1 asset
+assets by path *.js 1.41 MiB
+  asset bundle.js 1.4 MiB [emitted] (name: main)
+  asset main.872d761fa59420f02ddd.hot-update.js 11.2 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.872d761fa59420f02ddd.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.41 MiB = bundle.js 1.4 MiB main.872d761fa59420f02ddd.hot-update.js 11.2 KiB
+cached modules 1.27 MiB [cached] 41 modules
+runtime modules 27.5 KiB 14 modules
+javascript modules 5.78 KiB
+  ./src/App.js 4.39 KiB [code generated]
+  ./src/components/Sidebar.js 1.39 KiB [built] [code generated]
+
+ERROR in ./src/App.js 4:0-57
+Module not found: Error: Can't resolve './components/ProductListing' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 5:0-53
+Module not found: Error: Can't resolve './components/ShoppingCart' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 6:0-45
+Module not found: Error: Can't resolve './components/Checkout' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 7:0-51
+Module not found: Error: Can't resolve './components/UserProfile' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+4 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.99.9 compiled with 4 errors in 51 ms
+assets by status 1.98 KiB [cached] 1 asset
+assets by path *.js 1.43 MiB
+  asset bundle.js 1.41 MiB [emitted] (name: main)
+  asset main.394d3c7bdaaead897bf4.hot-update.js 15.7 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.394d3c7bdaaead897bf4.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.43 MiB = bundle.js 1.41 MiB main.394d3c7bdaaead897bf4.hot-update.js 15.7 KiB
+cached modules 1.27 MiB [cached] 42 modules
+runtime modules 27.5 KiB 14 modules
+javascript modules 9.79 KiB
+  ./src/App.js 4.39 KiB [code generated]
+  ./src/components/ProductListing.js 5.39 KiB [built] [code generated]
+
+ERROR in ./src/App.js 5:0-53
+Module not found: Error: Can't resolve './components/ShoppingCart' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 6:0-45
+Module not found: Error: Can't resolve './components/Checkout' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 7:0-51
+Module not found: Error: Can't resolve './components/UserProfile' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+ @ ./src/index.js 5:0-24 11:32-35
+
+3 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.99.9 compiled with 3 errors in 73 ms
+assets by status 1.98 KiB [cached] 1 asset
+assets by path *.js 1.43 MiB
+  asset bundle.js 1.42 MiB [emitted] (name: main)
+  asset main.8b8e9704c00d0afb7b4f.hot-update.js 14.6 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.8b8e9704c00d0afb7b4f.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.43 MiB = bundle.js 1.42 MiB main.8b8e9704c00d0afb7b4f.hot-update.js 14.6 KiB
+cached modules 1.27 MiB [cached] 43 modules
+runtime modules 27.5 KiB 14 modules
+javascript modules 8.53 KiB
+  ./src/App.js 4.39 KiB [code generated]
+  ./src/components/ShoppingCart.js 4.14 KiB [built] [code generated]
+
+ERROR in ./src/App.js 6:0-45
+Module not found: Error: Can't resolve './components/Checkout' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+resolve './components/Checkout' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+  using description file: /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/package.json (relative path: ./src)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/package.json (relative path: ./src/components/Checkout)
+      no extension
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/Checkout doesn't exist
+      .js
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/Checkout.js doesn't exist
+      .jsx
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/Checkout.jsx doesn't exist
+      as directory
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/Checkout doesn't exist
+ @ ./src/index.js 5:0-24 11:32-35
+
+ERROR in ./src/App.js 7:0-51
+Module not found: Error: Can't resolve './components/UserProfile' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+resolve './components/UserProfile' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+  using description file: /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/package.json (relative path: ./src)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/package.json (relative path: ./src/components/UserProfile)
+      no extension
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/UserProfile doesn't exist
+      .js
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/UserProfile.js doesn't exist
+      .jsx
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/UserProfile.jsx doesn't exist
+      as directory
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/UserProfile doesn't exist
+ @ ./src/index.js 5:0-24 11:32-35
+
+webpack 5.99.9 compiled with 2 errors in 52 ms
+assets by status 1.98 KiB [cached] 1 asset
+assets by path *.js 1.44 MiB
+  asset bundle.js 1.42 MiB [emitted] (name: main)
+  asset main.eb63279f27895f214048.hot-update.js 16.7 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.eb63279f27895f214048.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.44 MiB = bundle.js 1.42 MiB main.eb63279f27895f214048.hot-update.js 16.7 KiB
+cached modules 1.28 MiB [cached] 44 modules
+runtime modules 27.5 KiB 14 modules
+javascript modules 10.3 KiB
+  ./src/App.js 4.39 KiB [code generated]
+  ./src/components/Checkout.js 5.89 KiB [built] [code generated]
+
+ERROR in ./src/App.js 7:0-51
+Module not found: Error: Can't resolve './components/UserProfile' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+resolve './components/UserProfile' in '/home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src'
+  using description file: /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/package.json (relative path: ./src)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/package.json (relative path: ./src/components/UserProfile)
+      no extension
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/UserProfile doesn't exist
+      .js
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/UserProfile.js doesn't exist
+      .jsx
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/UserProfile.jsx doesn't exist
+      as directory
+        /home/kavia/workspace/code-generation/openshopease-64160-384ecf2c/openshopease_frontend/src/components/UserProfile doesn't exist
+ @ ./src/index.js 5:0-24 11:32-35
+
+webpack 5.99.9 compiled with 1 error in 62 ms
+assets by status 1.98 KiB [cached] 1 asset
+assets by path *.js 1.44 MiB
+  asset bundle.js 1.43 MiB [emitted] (name: main)
+  asset main.ba6c731c6b53f7efee5f.hot-update.js 14.4 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.ba6c731c6b53f7efee5f.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.44 MiB = bundle.js 1.43 MiB main.ba6c731c6b53f7efee5f.hot-update.js 14.4 KiB
+cached modules 1.28 MiB [cached] 45 modules
+runtime modules 27.5 KiB 14 modules
+javascript modules 8.5 KiB
+  ./src/App.js 4.39 KiB [code generated]
+  ./src/components/UserProfile.js 4.1 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 75 ms
