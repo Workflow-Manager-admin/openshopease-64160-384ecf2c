@@ -5,6 +5,8 @@ import ProductListing from "./components/ProductListing";
 import ShoppingCart from "./components/ShoppingCart";
 import Checkout from "./components/Checkout";
 import UserProfile from "./components/UserProfile";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const VIEWS = {
   PRODUCTS: "PRODUCTS",
@@ -63,34 +65,19 @@ function App() {
     setView(VIEWS.PROFILE);
   };
 
+  const cartCount = cart.reduce((a, c) => a + c.qty, 0);
+
+  const handleNav = (navView) => {
+    setView(VIEWS[navView] || navView);
+  };
+
   return (
-    <div className="openshop-app light-theme">
-      <header>
-        <nav className="ose-navbar" role="navigation" aria-label="Main Navigation">
-          <div className="ose-logo">
-            <span className="ose-logo-dot" aria-hidden="true" />
-            <span>OpenShopEase</span>
-          </div>
-          <div className="ose-nav-actions">
-            <button
-              className="ose-nav-btn"
-              style={view === VIEWS.PROFILE ? { fontWeight: 700 } : {}}
-              onClick={() => setView(VIEWS.PROFILE)}
-              aria-label="Go to account profile"
-            >
-              Account
-            </button>
-            <button
-              className="ose-nav-btn ose-cart-btn"
-              style={view === VIEWS.CART ? { fontWeight: 700 } : {}}
-              onClick={() => setView(VIEWS.CART)}
-              aria-label={`Cart (${cart.reduce((a, c) => a + c.qty, 0)})`}
-            >
-              Cart <span className="ose-cart-count">{cart.reduce((a, c) => a + c.qty, 0)}</span>
-            </button>
-          </div>
-        </nav>
-      </header>
+    <div className="openshop-app light-theme" style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <Header
+        cartCount={cartCount}
+        currentView={view}
+        onNav={handleNav}
+      />
       <div className="ose-container">
         <Sidebar
           selected={category}
@@ -126,6 +113,7 @@ function App() {
           )}
         </main>
       </div>
+      <Footer />
     </div>
   );
 }
