@@ -65,35 +65,39 @@ function App() {
 
   return (
     <div className="openshop-app light-theme">
-      <nav className="ose-navbar">
-        <div className="ose-logo">
-          <span className="ose-logo-dot" />
-          <span>OpenShopEase</span>
-        </div>
-        <div className="ose-nav-actions">
-          <button
-            className="ose-nav-btn"
-            style={view === VIEWS.PROFILE ? { fontWeight: 600 } : {}}
-            onClick={() => setView(VIEWS.PROFILE)}
-          >
-            Account
-          </button>
-          <button
-            className="ose-nav-btn ose-cart-btn"
-            style={view === VIEWS.CART ? { fontWeight: 600 } : {}}
-            onClick={() => setView(VIEWS.CART)}
-          >
-            Cart ({cart.reduce((a, c) => a + c.qty, 0)})
-          </button>
-        </div>
-      </nav>
+      <header>
+        <nav className="ose-navbar" role="navigation" aria-label="Main Navigation">
+          <div className="ose-logo">
+            <span className="ose-logo-dot" aria-hidden="true" />
+            <span>OpenShopEase</span>
+          </div>
+          <div className="ose-nav-actions">
+            <button
+              className="ose-nav-btn"
+              style={view === VIEWS.PROFILE ? { fontWeight: 700 } : {}}
+              onClick={() => setView(VIEWS.PROFILE)}
+              aria-label="Go to account profile"
+            >
+              Account
+            </button>
+            <button
+              className="ose-nav-btn ose-cart-btn"
+              style={view === VIEWS.CART ? { fontWeight: 700 } : {}}
+              onClick={() => setView(VIEWS.CART)}
+              aria-label={`Cart (${cart.reduce((a, c) => a + c.qty, 0)})`}
+            >
+              Cart <span className="ose-cart-count">{cart.reduce((a, c) => a + c.qty, 0)}</span>
+            </button>
+          </div>
+        </nav>
+      </header>
       <div className="ose-container">
         <Sidebar
           selected={category}
           setCategory={setCategory}
           setView={setView}
         />
-        <main className="ose-main">
+        <main className="ose-main" aria-live="polite">
           {view === VIEWS.PRODUCTS && (
             <ProductListing
               category={category}

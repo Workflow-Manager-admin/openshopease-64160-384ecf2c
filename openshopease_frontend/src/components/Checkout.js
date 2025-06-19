@@ -21,13 +21,13 @@ function Checkout({ cart, onSuccess, onCancel }) {
 
   if (cart.length === 0)
     return (
-      <div>
-        <div className="ose-title">Checkout</div>
-        <div style={{ color: "#888" }}>No items to checkout.</div>
-        <button className="ose-btn" style={{ marginTop: 18 }} onClick={onCancel}>
+      <section>
+        <div className="ose-title" style={{ marginBottom: 14 }}>Checkout</div>
+        <div style={{ color: "#888", fontSize: "1.07rem" }}>No items to checkout.</div>
+        <button className="ose-btn" style={{ marginTop: 20, minWidth: 120 }} onClick={onCancel}>
           Back to Cart
         </button>
-      </div>
+      </section>
     );
 
   // PUBLIC_INTERFACE
@@ -54,8 +54,8 @@ function Checkout({ cart, onSuccess, onCancel }) {
   if (done) {
     return (
       <div className="ose-checkout-success">
-        <div style={{ fontSize: "1.5rem", marginBottom: 12 }}>
-          🎉 Payment successful!
+        <div style={{ fontSize: "1.6rem", marginBottom: 12 }}>
+          <span role="img" aria-label="Celebration">🎉</span> Payment successful!
         </div>
         <div>Your order has been placed.</div>
       </div>
@@ -63,9 +63,9 @@ function Checkout({ cart, onSuccess, onCancel }) {
   }
 
   return (
-    <div>
-      <div className="ose-title">Checkout</div>
-      <form className="ose-checkout-form" onSubmit={handlePayment}>
+    <section>
+      <div className="ose-title" style={{ marginBottom: 12 }}>Checkout</div>
+      <form className="ose-checkout-form" onSubmit={handlePayment} autoComplete="off">
         <div className="ose-checkout-row">
           <label className="ose-checkout-label" htmlFor="cus-name">
             Name on Card
@@ -74,9 +74,12 @@ function Checkout({ cart, onSuccess, onCancel }) {
             id="cus-name"
             className="ose-checkout-input"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
             required
             disabled={processing}
+            placeholder="Full name"
+            autoFocus
+            aria-required="true"
           />
         </div>
         <div className="ose-checkout-row">
@@ -87,32 +90,44 @@ function Checkout({ cart, onSuccess, onCancel }) {
             id="cus-card"
             className="ose-checkout-input"
             value={card}
-            onChange={(e) => setCard(e.target.value.replace(/\D/g, ""))}
+            onChange={e => setCard(e.target.value.replace(/\D/g, ""))}
             required
             maxLength={16}
             minLength={16}
             placeholder="1234 5678 1234 5678"
             inputMode="numeric"
             disabled={processing}
+            aria-required="true"
           />
         </div>
         <div className="ose-checkout-row">
-          <label className="ose-checkout-label">Total</label>
-          <div style={{ fontWeight: 600, color: "var(--accent)" }}>
+          <span className="ose-checkout-label" aria-live="polite">Total</span>
+          <div style={{ fontWeight: 700, color: "var(--accent)", fontSize: "1.14rem" }}>
             ${total.toFixed(2)}
           </div>
         </div>
-        {error && <div style={{ color: "#c00", marginBottom: 9 }}>{error}</div>}
+        {error && (
+          <div style={{ color: "#c00", marginBottom: 10, fontWeight: 600 }} aria-live="assertive">
+            {error}
+          </div>
+        )}
         <button
           className="ose-payment-btn"
           type="submit"
           disabled={processing}
+          aria-busy={processing}
         >
           {processing ? "Processing..." : "Pay Now"}
         </button>
         <button
           className="ose-btn"
-          style={{ width: "100%", marginTop: 12, background: "#e0e0e0", color: "#333" }}
+          style={{
+            width: "100%",
+            marginTop: 12,
+            background: "#e0e0e0",
+            color: "#333",
+            fontWeight: 600
+          }}
           type="button"
           disabled={processing}
           onClick={onCancel}
@@ -120,7 +135,7 @@ function Checkout({ cart, onSuccess, onCancel }) {
           Cancel
         </button>
       </form>
-    </div>
+    </section>
   );
 }
 export default Checkout;

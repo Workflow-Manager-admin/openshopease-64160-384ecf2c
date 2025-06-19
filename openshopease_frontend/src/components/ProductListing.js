@@ -90,38 +90,49 @@ function ProductListing({ category, search, setSearch, addToCart }) {
   }, [category, search]);
 
   return (
-    <div>
+    <section aria-label="Product listing section">
       <div
         style={{
           marginBottom: 20,
           display: "flex",
           alignItems: "center",
-          gap: 16,
+          gap: 18,
+          flexWrap: "wrap",
         }}
       >
-        <div className="ose-title" style={{ margin: 0 }}>
+        <h1 className="ose-title" style={{ margin: 0, fontSize: "1.4rem" }}>
           Products
-        </div>
+        </h1>
         <form
           className="ose-searchbar"
+          role="search"
+          aria-label="Product search"
           onSubmit={(e) => e.preventDefault()}
-          style={{ marginLeft: "auto", width: 270, maxWidth: "100%" }}
+          style={{ marginLeft: "auto", maxWidth: 270, flex: "1 1 260px" }}
         >
           <input
             type="search"
-            placeholder="Search"
+            placeholder="Search products"
             value={search}
             onChange={handleSearch}
             aria-label="Search products"
+            autoComplete="off"
+            tabIndex={0}
           />
         </form>
       </div>
       <div className="ose-product-list">
         {products.length === 0 && (
-          <div style={{ color: "#888" }}>No products found for your search or filter.</div>
+          <div style={{ color: "#888", fontSize: "1.06rem" }} aria-live="polite">No products found for your search or filter.</div>
         )}
         {products.map((product) => (
-          <div className="ose-product-item" key={product.id} data-testid={`product-${product.id}`}>
+          <div
+            className="ose-product-item"
+            key={product.id}
+            data-testid={`product-${product.id}`}
+            tabIndex={0}
+            aria-label={`Product card: ${product.name}, $${product.price.toFixed(2)}`}
+          >
             <img
               className="ose-product-img"
               src={product.img}
@@ -135,13 +146,14 @@ function ProductListing({ category, search, setSearch, addToCart }) {
               className="ose-btn ose-product-add"
               onClick={() => addToCart(product)}
               type="button"
+              aria-label={`Add ${product.name} to cart`}
             >
               Add to Cart
             </button>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
